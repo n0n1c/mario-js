@@ -16,10 +16,24 @@ printPyramid(5);
 function printPyramid(height) {
     //console.log("Uh oh... the pyramid is under construction.");
     //console.log("Check back soon, our developers are hard at work as we speak!");
-    for (brick = "##", space = " " * "brick.length"; brick.length < height; brick += "#", space-= " ")
-      console.log(space, brick)
+    // first loop to control height
+    for (var rowLength = 0; rowLength < height; rowLength++){
+      // establish variables
+      var block = "";
+      var endblock = "##";
+      var spaces = height - rowLength;
+      var bricks = rowLength;
+      // Second loop to add space
+      for (var i = 0; i < spaces; i++){
+        block += " ";
+      }
+      // Third loop to add hash
+      for (var i = 0; i < bricks ; i++){
+        block += "#";
+      }
+      console.log(block + endblock);
+    }
+  }
 
     // TODO
     // print that pyramid!
-
-}
