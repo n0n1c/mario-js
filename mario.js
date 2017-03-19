@@ -1,25 +1,22 @@
+//make variable to access zbutton
+ var bttn = document.getElementById("zbutton");
+//attached button click to zbFunk
+ bttn.onclick = function zbFunk() {
 
-/**
- * determineHeightAndThenDrawPyramid
- *
- * Determines the current value that the user has typed in the 'How high?' text-box,
- * and then draws a pyramid with that height.
- */
-function determineHeightAndThenDrawPyramid() {
-
+   //
+   var hHigh = document.getElementById("height").value;
     // just so we know we're here
     console.log("someone invoked the determineHeightAndThenDrawPyramid function!");
 
     // TODO 3
     // figure out the height the user typed (replace the "5" below)
-    heightStr = "5";
 
     // here we convert the string to an int
-    height = parseInt(heightStr);
+    height = parseInt(hHigh);
 
     // TODO 2
     // draw the pyramid with the given height
-
+    drawPyramid(height);
 }
 
 
@@ -37,7 +34,7 @@ function determineHeightAndThenDrawPyramid() {
 
      // TODO 4
      // before drawing, clear the old content
-
+     document.getElementById("pyramid").innerHTML = "";
 
      // for each row....
      for (var row = 0; row < height; row++) {
