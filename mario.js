@@ -1,4 +1,4 @@
-//make variable to access zbutton
+// make variable to access zbutton
  var bttn = document.getElementById("zbutton");
 //attached button click to zbFunk
  bttn.onclick = function zbFunk() {
@@ -6,7 +6,7 @@
    //
    var hHigh = document.getElementById("height").value;
     // just so we know we're here
-    console.log("someone invoked the determineHeightAndThenDrawPyramid function!");
+    //console.log("someone invoked the determineHeightAndThenDrawPyramid function!");
 
     // TODO 3
     // figure out the height the user typed (replace the "5" below)
@@ -46,7 +46,7 @@
          // build up a string for this row
          var rowStr = "";
          for (var i = 0; i < numSpaces; i++) {
-             rowStr += ".";
+             rowStr += "\u00A0";
          }
          for (var i = 0; i < numBricks; i++) {
              rowStr += "#";
